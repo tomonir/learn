@@ -374,7 +374,7 @@ class Data
 {
 	Data(int x=0,int y=0,int r=0)
 	{
-		x=x;y=y;z=z;
+		x=x;y=y;r=r;
 	}
 	int x;
 	int y;
@@ -385,57 +385,18 @@ class Node
 {
 public:
 	Node(int x=0){
-		value = new Data;
+		value =x;
 		next_node= NULL;
 		parent_node = NULL;
-	}
-
-	Node(const Node& source)
-	{
-		Data temp(source.value.x,source.value.y,source.value.r);
-		this->value = temp;
-		this->next_node = source.next_node;
-		this->parent_node = source.parent_node;
-
-	}
-
-	Node& operator=(const Node& source)
-	{
-		Data temp(source.value.x,source.value.y,source.value.r);
-		this->value = temp;
-		this->next_node = source.next_node;
-		this->parent_node = source.parent_node;
-	}
-
-	Node(Node&& source)
-	{
-			this->value = source.value;
-			this->next_node = source.next_node;
-			this->parent_node = source.parent_node;
-
-			source.value = NULL;
-			source.next_node= NULL;
-			source.parent_node = NULL;
-	}
-
-	Node& operator=(Node&& source)
-	{
-				this->value = source.value;
-				this->next_node = source.next_node;
-				this->parent_node = source.parent_node;
-
-				source.value = NULL;
-				source.next_node= NULL;
-				source.parent_node = NULL;
 	}
 
 
 	~Node()
 	{
 		cout<<"Node destrucitor called"<<endl;
-		delete value;
+
 	}
-	Data* value;
+	int value;
 	Node* next_node;
 	Node* parent_node;
 
