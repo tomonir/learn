@@ -51,10 +51,21 @@ public :
 		unique_ptr<Ractangle> rect_unique = make_unique<Ractangle>(5,3);
 		passUniquePointer(rect_unique.get());
 		
-		//shared_ptr<Ractangle> rect_shared = make_shared<Ractangle>(5,3);
+		shared_ptr<Ractangle> rect_shared = make_shared<Ractangle>(5,3);
 		
-		//thread t1(passSharedPointer,rect_shared); thread t2(passSharedPointer,rect_shared); thread t3(passSharedPointer,rect_shared);
-		//t1.join();t2.join();t2.join();
+		thread t1(passSharedPointer,rect_shared); thread t2(passSharedPointer,rect_shared); thread t3(passSharedPointer,rect_shared);
+		t1.join();t2.join();t2.join();
 		
 	}
+};
+
+
+class TestSmartPointer
+{
+public:
+	TestSmartPointer()
+{
+		SmartPointer smart_ptr1;
+		smart_ptr1.testMe();
+}
 };

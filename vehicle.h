@@ -112,3 +112,36 @@ Vehicle passVehicle(const Vehicle&& v)
 
 
 
+class TestCopyConstructor{
+public:
+	TestCopyConstructor()
+{
+			Vehicle v1;
+
+			v1.insertLight("left");
+			//v1.insertLight("right");
+			//v1.insertLight("up");
+			//v1.insertLight("left");
+			//v1.insertLight("right");
+			//v1.insertLight("up");
+
+
+			Vehicle v2 ;
+
+			v2 = v1; //assignment operator will be called
+
+			//copy constructor will be called twice
+			//passVehicle(v2);
+
+			//v2=takeVehicle();
+
+			//cout<< v2;
+
+			int total_size = 6;
+			//dynamic memory acclocation;
+
+			Vehicle *vehicles = new  Vehicle[total_size];
+			delete[] vehicles;
+}
+};
+
