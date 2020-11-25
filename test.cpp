@@ -18,13 +18,6 @@ using namespace std;
 
 #include "trialteration.h"
 
-//################################################
-
-
-
-
-
-
 
 
 
@@ -32,22 +25,19 @@ using namespace std;
 int main() {
 
 
-	TestCopyConstructor testCopyConstructor;
+	//TestCopyConstructor testCopyConstructor;
 
 	MatrixTest matrixtest;
 
-	TestTriaalteration testtrialteration;
+	//TestTriaalteration testtrialteration;
 
-	TestLinkList testLinkList;
+	//TestLinkList testLinkList;
 
 	//TestSmartPointer testsmart_pointer;
 
-	TestdynamicCast testDynamic_cast;
+	//TestdynamicCast testDynamic_cast;
 
 
-
-
-//dynamic casting test===========================
 
 
 }

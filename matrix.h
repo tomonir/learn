@@ -52,6 +52,47 @@ public:
 
 	}
 
+
+	void testSpiralMatrix()
+	{
+
+		int R=4;int C=4;
+		int M[R][C]= {
+				{1, 2, 3 ,4},
+				{5, 6, 7, 8},
+				{9, 10, 11, 12},
+				{14,15,16,17},
+		};
+
+
+		if (C!=R)
+			return;
+
+		int max = C;
+		for (int r=0;r<R; r++)
+		{
+			//left
+			for (int c=r;c<max;c++)
+				cout<< M[r][c]<<endl;
+
+			//down
+			for (int r_d=r+1;r_d<max;r_d++)
+				cout<< M[r_d][max-1]<<endl;
+
+
+			//left
+			for (int c_l=max-2;c_l>=r;c_l--)
+				cout<< M[max-1][c_l]<<endl;
+
+			//up
+			for (int r_u=max-2;r_u>r;r_u--)
+				cout<< M[r_u][r]<<endl;
+
+			max = max-1;
+		}
+
+	}
+
 	void testDotProductWithStaticArray()
 	{
 		int m1,n1, m2,n2;
@@ -122,7 +163,8 @@ public:
 	MatrixTest()
 {
 		Matrix matrix;
-		matrix.testDotProduct();
+		//matrix.testDotProduct();
+		matrix.testSpiralMatrix();
 }
 	
 };
