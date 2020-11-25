@@ -11,7 +11,8 @@ using namespace std;
 
 
 #include "vehicle.h"
-
+#include "smart_pointer.h"
+#include "dynamic_casting.h"
 
 
 //################################################
@@ -377,13 +378,16 @@ int main() {
 	delete[] vehicles;
 
 
-	std::cout<<"Successfull"<<endl;
-	return 0;
+	//std::cout<<"Successfull"<<endl;
+	//return 0;
 
 //DOT PRODUCT
 //========================================
+
+/*
 	Test test;
 	test.testDotProduct();
+*/
 	//TODO SOLVE IT
 	//test.testDotProductWithStaticArray();
 //========================================
@@ -392,6 +396,7 @@ int main() {
 //LinkedList
 //========================================
 
+/*
 	LinkedList mylist;
 	mylist.push(5);
 	mylist.push(10);
@@ -414,11 +419,23 @@ int main() {
 		cout<< tempNode.value<<endl;
 	if (mylist.pop(tempNode))
 		cout<< tempNode.value<<endl;
-
+*/
 //========================================
 
+	SmartPointer smart_ptr1;
+	smart_ptr1.testMe();
 
 
+
+//dynamic casting test===========================
+	Entity* e1 = new  Wheel();
+	Entity* e2 = new  Light();
+	Wheel* curr_wheel1 = dynamic_cast<Wheel*> (e1);
+	Wheel* curr_wheel2 = dynamic_cast<Wheel*> (e2);
+	if (curr_wheel2==nullptr)
+	{
+		cout<<"to Wheel from Light conversion NOK"<<endl;
+	}
 
 }
 
