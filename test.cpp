@@ -17,7 +17,8 @@ using namespace std;
 #include "matrix.h"
 
 #include "trialteration.h"
-
+#include "vector.h"
+#include "dfs.h"
 
 
 
@@ -27,7 +28,7 @@ int main() {
 
 	//TestCopyConstructor testCopyConstructor;
 
-	MatrixTest matrixtest;
+	//MatrixTest matrixtest;
 
 	//TestTriaalteration testtrialteration;
 
@@ -38,7 +39,8 @@ int main() {
 	//TestdynamicCast testDynamic_cast;
 
 
-
+	//TestVector testVecor;
+	TestDSFClass testDSF;
 
 }
 
