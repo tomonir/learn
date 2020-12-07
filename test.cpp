@@ -20,6 +20,11 @@ using namespace std;
 #include "vector.h"
 #include "dfs.h"
 
+#include "inheritence.h"
+
+
+
+
 
 
 
@@ -40,7 +45,8 @@ int main() {
 
 
 	//TestVector testVecor;
-	TestDSFClass testDSF;
+	//TestDSFClass testDSF;
+	TestInheritence testInheritence;
 
 }
 
