@@ -1,0 +1,12 @@
+{
+    "job_titles":["developer", "Embedded", "Robotics"],
+	"search_setup":[
+	{"search_button":{"filed_name":"xyz"}},
+	{"textFiled":{"filed_name":"xyz","text":"Developer"}},
+	{"textFiled":{"filed_name":"xyz","text":"Stuttgart"}}
+	],
+	"search_searching_area":[
+	{"area":{"filed_name":"xyz"}}
+	]
+	
+}
