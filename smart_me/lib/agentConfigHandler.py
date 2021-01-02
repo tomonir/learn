@@ -22,7 +22,7 @@ class AgentConfigHandler:
                     return
                 self.jobConfigList.append(config)
         except:
-            self.logger.getLogger(__name__).error('File not found ->'+configFilePath)
+            self.logger.getLogger(__name__).error('File not found !! '+configFilePath)
             return
             
     def __loadConfigFromAFolder(self,configFolderPath):

@@ -13,7 +13,7 @@ class TaskHandler:
             if (taskName == "JobAlert"):
                 self.taskObject= JobAlert(config)
             elif (taskName == "ContentMonitor"):
-                self.taskObject= ContentMonitor()    
+                self.taskObject= ContentMonitor(config)    
    
     def execute(self):
         self.taskObject.execute()    
